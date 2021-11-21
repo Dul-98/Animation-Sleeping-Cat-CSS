@@ -4,7 +4,7 @@ body{
     margin: 0;
 }
 .containeer{
-    border:1px solid white;
+
     height: 200px;
     width: 350px;
     position: absolute;
@@ -103,7 +103,7 @@ body{
     width: 140px;
     position: absolute;
     right: 65px;
-    bottom: 0;
+    bottom: 0px;
     border-radius: 60px 60px 0 0;
     animation: sleep 2s infinite;
     transform-origin: bottom right;
@@ -112,5 +112,58 @@ body{
 @keyframes sleep{
     50%{
         transform:scale(0.9,1.05);
+    }
+}
+.tail{
+    background-color: gold;
+    height: 20px;
+    width: 100px;
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+    border-radius: 20px 0 0 20px;
+
+}
+.body:before{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 12px;
+    width: 30px;
+    border-radius: 6px;
+    bottom: 0;
+    left: 22px;
+    box-shadow: 45px 0 #ffffff;
+}
+.bubble{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    left: 65px;
+    top: 20px;
+    border-radius: 50px 50px 50px 50px;
+    animation: bubble-scale 2s infinite;
+}
+@keyframes bubble-scale{
+    50%{
+        transform: scale(1.6);
+    }
+}
+.shadow{
+    height: 10px;
+    width: 240px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    bottom: 52px;
+    position: absolute;
+    left: 70px;
+    animation: shadow 2s infinite;
+
+    @keyframes shadow {
+        50%{
+            transform:scaleX(0.7);
+        }
+        
     }
 }
